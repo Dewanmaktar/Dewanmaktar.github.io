@@ -1,5 +1,15 @@
-/* Dark Mode Toggle Button */
-.dark-toggle {
+header {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #1f2937;
+  color: white;
+  flex-direction: column;
+  text-align: center;
+  padding: 2rem;
+}
+{
   margin-top: 1rem;
   padding: 0.5rem 1rem;
   background-color: #2563eb;
