@@ -2,110 +2,86 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Dewan Mohsin Aktar | Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
+
+  <!-- Fonts and Styles -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+  <!-- 3D Background -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
 </head>
 <body>
-  <header>
-    <h1>Dewan Mohsin Aktar</h1>
-    <img src="pic.jpg" alt="Dewan Mohsin Aktar" class="profile-pic">
-    <p>Cloud Computing & DevOps Enthusiast</p>
-    <nav>
-      <button id="darkToggle" class="dark-toggle">🌙 Toggle Dark Mode</button>
-      <a href="#about">About</a>
-      <a href="#skills">Skills</a>
-      <a href="#projects">Projects</a>
-      <a href="#certifications">Certifications</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
 
-  <div class="container">
-    <section id="about" class="section">
+  <div id="vanta-bg">
+    <header>
+      <div class="header-container">
+        <div class="profile-card" data-aos="fade-up">
+          <img src="pic.jpg" class="profile-pic" alt="Dewan Mohsin Aktar" />
+          <h1>Dewan Mohsin Aktar</h1>
+          <p>Cloud Computing & DevOps Enthusiast</p>
+          <a href="Bio_Data.pdf" download class="resume-btn">📄 Download Resume</a>
+        </div>
+        <nav>
+          <a href="#about">About</a>
+          <a href="#skills">Skills</a>
+          <a href="#projects">Projects</a>
+          <a href="#certifications">Certifications</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
+    </header>
+  </div>
+
+  <main class="container">
+    <section id="about" data-aos="fade-up">
       <h2>Professional Summary</h2>
-      <p>Cloud Computing & DevOps enthusiast with expertise in AWS, Terraform, Docker, Kubernetes, and CI/CD pipelines. Skilled in deploying, automating, and optimizing cloud infrastructure while ensuring security and cost efficiency. Passionate about infrastructure as code (IaC), cloud security, and performance tuning. A quick learner and problem solver, eager to contribute technical expertise to innovative cloud solutions.</p>
+      <p>Cloud Computing & DevOps enthusiast with expertise in AWS, Terraform, Docker, Kubernetes, and CI/CD pipelines...</p>
     </section>
 
-    <section class="section">
-      <h2>Education</h2>
-      <ul>
-        <li><strong>B.Tech in Computer Science & Engineering</strong>, The Assam Kaziranga University — GPA: 7.57/10 (Expected 2026)</li>
-        <li><strong>Senior Secondary</strong>, Sublime Academy — 83%</li>
-        <li><strong>Secondary</strong>, HOMA — 67%</li>
-      </ul>
-    </section>
-
-    <section id="skills" class="section">
+    <section id="skills" data-aos="fade-up">
       <h2>Technical Skills</h2>
       <ul>
-        <li><strong>Cloud Computing:</strong> AWS (EC2, S3, VPC, Route-53, Lambda, EBS, IAM, Security Groups, RDS MySQL, DynamoDB)</li>
-        <li><strong>DevOps:</strong> Docker, Kubernetes, Jenkins, Terraform</li>
-        <li><strong>Programming:</strong> Python, Java, JavaScript, C</li>
-        <li><strong>Web Development:</strong> HTML5, CSS3, MySQL</li>
-        <li><strong>Administration:</strong> Linux, Windows</li>
+        <li>AWS, Docker, Kubernetes, Jenkins, Terraform</li>
+        <li>Python, Java, JavaScript, HTML5, CSS3</li>
+        <li>MySQL, Linux, Git, GitHub</li>
       </ul>
     </section>
 
-    <section id="projects" class="section" data-aos="fade-up">
+    <section id="projects" data-aos="fade-up">
       <h2>Projects</h2>
       <ul>
-        <li><strong>Scalable Web App Deployment using AWS</strong>
-          <ul>
-            <li>Configured custom VPC for security</li>
-            <li>Used EC2 and NGINX for load balancing</li>
-            <li>Integrated S3 for static content storage</li>
-          </ul>
-        </li>
+        <li><strong>AWS Web App Deployment:</strong> Custom VPC + EC2 + NGINX + S3 integration</li>
       </ul>
     </section>
 
-    <section class="section">
-      <h2>Accomplishments</h2>
-      <ul>
-        <li>Reliance Foundation Undergraduate Scholarship</li>
-        <li>Tata Brand Assessment - Tata Imagination Challenge 2023</li>
-        <li>Flipkart GRID 5.0 Robotics Challenge (Level 1)</li>
-        <li>Tata Crucible Campus Quiz 2023</li>
-      </ul>
-    </section>
-
-    <section id="certifications" class="section" data-aos="fade-up">
+    <section id="certifications" data-aos="fade-up">
       <h2>Certifications</h2>
       <ul>
-        <li>AWS Academy Graduate: Machine Learning Foundations</li>
-        <li>Basics of Computer Networking</li>
-        <li>Programming Basics</li>
+        <li>AWS Academy Graduate</li>
         <li>HTML5, CSS3, JavaScript</li>
-        <li>Introduction to Java Programming</li>
-        <li>Hands-On Web Development with JavaScript</li>
+        <li>Java Basics, Computer Networking</li>
       </ul>
     </section>
 
-    <section class="section">
-      <h2>Languages</h2>
-      <p>English, Hindi, Bengali, Assamese</p>
-    </section>
-
-    <section id="contact" class="section contact" data-aos="fade-up">
+    <section id="contact" data-aos="fade-up">
       <h2>Contact</h2>
-      <p><strong>Location:</strong> Barpeta, Assam, India 781316</p>
       <p><strong>Email:</strong> <a href="mailto:Dewanaktar128@outlook.in">Dewanaktar128@outlook.in</a></p>
       <p><strong>Phone:</strong> +91 8822341630</p>
-      <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/dewan-mohsin-aktar" target="_blank">linkedin.com/in/dewan-mohsin-aktar</a></p>
+      <p><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/dewan-mohsin-aktar" target="_blank">linkedin.com/in/dewan-mohsin-aktar</a></p>
     </section>
-  </div>
+  </main>
 
   <footer>
     <p>&copy; 2025 Dewan Mohsin Aktar. All rights reserved.</p>
   </footer>
 
+  <!-- Scripts -->
   <script src="script.js"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>
-  AOS.init();
-</script>
+  <script>AOS.init();</script>
 </body>
 </html>
