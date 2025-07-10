@@ -1,10 +1,165 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>My Portfolio</title>
-  </head>
-  <body>
-    <h1>Hello, I'm [Your Name]!</h1>
-    <p>Welcome to my portfolio website.</p>
-  </body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dewan Mohsin Aktar's Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f0f0f0;
+            margin: 20px; /* Added margin to body */
+        }
+        nav {
+            position: sticky;
+            top: 0;
+            background: #333;
+            padding: 10px 0;
+            z-index: 1000;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+        nav ul li {
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+        .photo img {
+            display: block;
+            margin: 20px auto;
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+        }
+        section {
+            padding: 20px;
+            margin: 20px 0;
+            background: #fff; /* Added background color to sections */
+            border-radius: 8px; /* Added border radius to sections */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Added box shadow to sections */
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background: #333;
+            color: #fff;
+            margin-top: 20px; /* Added margin to footer */
+            border-radius: 8px; /* Added border radius to footer */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#certificates">Certificates</a></li>
+                <li><a href="#languages">Languages</a></li>
+                <li><a href="#accomplishments">Accomplishments</a></li>
+                <li><a href="#internships">Internships</a></li>
+                <li><a href="#links">Links</a></li>
+            </ul>
+        </nav>
+        <h1>Dewan Mohsin Aktar</h1>
+        <p>6th Sem Student in B.tech CSE at The Assam Kaziranga University</p>
+        <p>Phone: +918822341630 | Email: et22bthcs128@kazirangauniversity.in</p> <!-- Added phone number and email -->
+    </header>
+
+    <div class="photo">
+        <img src="photo.jpg" alt="Dewan Mohsin Aktar">
+    </div>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p>Hello! I am Dewan Mohsin Aktar, a passionate student pursuing B.Tech in Computer Science & Engineering at The Assam Kaziranga University. I have a keen interest in web development, cloud computing, and machine learning.</p>
+    </section>
+
+    <section id="education">
+        <h2>Education</h2>
+        <ul>
+            <li>B.Tech: Computer Science & Engineering, The Assam Kaziranga University, Expected in 01/2026</li>
+            <li>Senior Secondary Examination, Sublime Academy, Percentage: 83%</li>
+            <li>Secondary Examination, HOMA, Percentage: 67%</li>
+        </ul>
+    </section>
+
+    <section id="skills">
+        <h2>Skills</h2>
+        <ul>
+            <li>Programming Languages: C, Python, and Java</li>
+            <li>Web Technologies: MySQL, HTML5, CSS3, and JavaScript</li>
+            <li>Microsoft Office 365</li>
+            <li>Cloud Computing: AWS (EC2, S3, VPC, Route-53, Lambda, EBS, IAM, Security Groups, RDS MySQL, DynamoDB)</li>
+            <li>Terraform</li>
+        </ul>
+    </section>
+
+    <section id="certificates">
+        <h2>Certificates</h2>
+        <ul>
+            <li>Certificate of Participation in Level 1: E-Commerce</li>
+            <li>Certificate of Participation in Round 1 Tata Brand Assessment of Tata Imagination Challenge 2023</li>
+            <li>Certificate of Participation in Level 1: MCQ Test of Flipkart GRID 5.0-Robotics Challenge</li>
+            <li>Certificate of Participation in Tata Crucible Campus Quiz 2023 of Tata Crucible Campus Quiz 2023</li>
+            <li>AWS Academy Graduate-AWS Academy Machine Learning Foundations</li>
+            <li>Certificate of Completion Machine Learning with Python</li>
+            <li>Basics of Computer Networking</li>
+            <li>Programming Basics</li>
+            <li>CSS3</li>
+            <li>Introduction to Programming Using Java</li>
+            <li>Hands on Web Development with Javascript</li>
+            <li>HTML5-The Language</li>
+        </ul>
+    </section>
+
+    <section id="languages">
+        <h2>Languages</h2>
+        <ul>
+            <li>English</li>
+            <li>Hindi</li>
+            <li>Bengali</li>
+            <li>Assamese</li>
+        </ul>
+    </section>
+
+    <section id="accomplishments">
+        <h2>Accomplishments</h2>
+        <ul>
+            <li>Reliance Foundation Undergraduate Scholarship</li>
+        </ul>
+    </section>
+
+    <section id="internships">
+        <h2>Internships</h2>
+        <ul>
+            <li>Hands-On Web Development with JavaScript</li>
+        </ul>
+    </section>
+
+    <section id="links">
+        <h2>Links</h2>
+        <a href="https://x.com/DewanMohsinAkt3">X</a>
+        <a href="https://www.linkedin.com/in/dewan-mohsin-aktar-85a17018a/">LinkedIn</a>
+        <a href="https://www.facebook.com/dewanm.aktar/">Facebook</a>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Dewan Mohsin Aktar</p>
+    </footer>
+</body>
 </html>
