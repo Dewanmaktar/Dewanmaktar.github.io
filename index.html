@@ -1,87 +1,256 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dewan Mohsin Aktar | Portfolio</title>
-
-  <!-- Fonts and Styles -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css" />
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-
-  <!-- 3D Background -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dewan Mohsin Aktar | Cloud & DevOps Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: #e0e0e0;
+            overflow-x: hidden;
+        }
+        #bg-canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+        .glass-card {
+            background: rgba(20, 20, 30, 0.6);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .skill-badge {
+            background: rgba(45, 212, 191, 0.1);
+            border: 1px solid rgba(45, 212, 191, 0.3);
+            color: #5eead4;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        .section-title {
+            background: linear-gradient(90deg, #5eead4, #a78bfa);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
 </head>
-<body>
+<body class="bg-[#0a0a14]">
 
-  <div id="vanta-bg">
-    <header>
-      <div class="header-container">
-        <div class="profile-card" data-aos="fade-up">
-          <img src="pic.jpg" class="profile-pic" alt="Dewan Mohsin Aktar" />
-          <h1>Dewan Mohsin Aktar</h1>
-          <p>Cloud Computing & DevOps Enthusiast</p>
-          <a href="Bio_Data.pdf" download class="resume-btn">📄 Download Resume</a>
-        </div>
-        <nav>
-          <a href="#about">About</a>
-          <a href="#skills">Skills</a>
-          <a href="#projects">Projects</a>
-          <a href="#certifications">Certifications</a>
-          <a href="#contact">Contact</a>
-        </nav>
-      </div>
-    </header>
-  </div>
+    <canvas id="bg-canvas"></canvas>
 
-  <main class="container">
-    <section id="about" data-aos="fade-up">
-      <h2>Professional Summary</h2>
-      <p>Cloud Computing & DevOps enthusiast with expertise in AWS, Terraform, Docker, Kubernetes, and CI/CD pipelines...</p>
-    </section>
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        
+        <!-- Header & Navigation -->
+        <header class="flex justify-between items-center py-6">
+            <div class="text-2xl font-bold text-white">DMA.</div>
+            <nav class="hidden md:flex space-x-8 text-lg">
+                <a href="#about" class="hover:text-teal-300 transition-colors">About</a>
+                <a href="#experience" class="hover:text-teal-300 transition-colors">Experience</a>
+                <a href="#skills" class="hover:text-teal-300 transition-colors">Skills</a>
+                <a href="#projects" class="hover:text-teal-300 transition-colors">Projects</a>
+                <a href="#certifications" class="hover:text-teal-300 transition-colors">Certifications</a>
+                <a href="#contact" class="hover:text-teal-300 transition-colors">Contact</a>
+            </nav>
+        </header>
 
-    <section id="skills" data-aos="fade-up">
-      <h2>Technical Skills</h2>
-      <ul>
-        <li>AWS, Docker, Kubernetes, Jenkins, Terraform</li>
-        <li>Python, Java, JavaScript, HTML5, CSS3</li>
-        <li>MySQL, Linux, Git, GitHub</li>
-      </ul>
-    </section>
+        <!-- Hero Section -->
+        <section id="hero" class="min-h-screen flex flex-col justify-center items-center text-center">
+            <div class="glass-card p-8 md:p-12 rounded-3xl max-w-3xl mx-auto">
+                <img src="https://placehold.co/128x128/14141d/ffffff?text=DMA" alt="Dewan Mohsin Aktar" class="w-32 h-32 rounded-full mx-auto mb-6 border-4 border-teal-400">
+                <h1 class="text-4xl md:text-6xl font-bold text-white">Dewan Mohsin Aktar</h1>
+                <p class="text-xl md:text-2xl mt-4 section-title font-semibold">Cloud Computing & DevOps Enthusiast</p>
+                <p class="mt-6 max-w-xl mx-auto text-gray-300">
+                    Passionate about building scalable and resilient infrastructure using modern cloud and DevOps technologies.
+                </p>
+                <a href="#" class="mt-8 inline-block bg-teal-500 text-gray-900 font-bold py-3 px-8 rounded-full hover:bg-teal-400 transition-transform transform hover:scale-105">
+                    Download Resume
+                </a>
+            </div>
+        </section>
 
-    <section id="projects" data-aos="fade-up">
-      <h2>Projects</h2>
-      <ul>
-        <li><strong>AWS Web App Deployment:</strong> Custom VPC + EC2 + NGINX + S3 integration</li>
-      </ul>
-    </section>
+        <!-- About Section -->
+        <section id="about" class="py-20">
+            <div class="glass-card p-8 md:p-12 rounded-3xl max-w-4xl mx-auto">
+                <h2 class="text-4xl font-bold text-center mb-8 section-title">Professional Summary</h2>
+                <p class="text-lg text-center text-gray-300 leading-relaxed">
+                    Cloud Computing & DevOps enthusiast with expertise in AWS, Terraform, Docker, Kubernetes, and CI/CD pipelines. Proven ability to design, deploy, and manage cloud-native applications and infrastructure. Seeking to leverage my skills to contribute to innovative projects and drive technological excellence.
+                </p>
+            </div>
+        </section>
+        
+        <!-- Experience Section -->
+        <section id="experience" class="py-20">
+            <div class="glass-card p-8 md:p-12 rounded-3xl max-w-4xl mx-auto">
+                <h2 class="text-4xl font-bold text-center mb-12 section-title">Internship Experience</h2>
+                <div class="relative pl-8 border-l-2 border-teal-500/30">
+                     <!-- Timeline Dot -->
+                    <div class="absolute -left-[11px] top-1 w-5 h-5 bg-teal-400 rounded-full border-4 border-[#0a0a14]"></div>
+                    <h3 class="text-2xl font-semibold text-white">State Bank of India (SBI)</h3>
+                    <p class="text-teal-300 my-1">AI Intern (Retail Lending)</p>
+                    <p class="text-gray-400 text-sm mb-4">Summer 2024</p>
+                    <p class="text-gray-300 leading-relaxed">
+                        Worked on a project focused on "Artificial Intelligence in Retail Lending". The primary goal was to enhance customer insights for housing and personal loans by leveraging AI and machine learning techniques to analyze customer data, predict behavior, and improve risk assessment models.
+                    </p>
+                </div>
+            </div>
+        </section>
 
-    <section id="certifications" data-aos="fade-up">
-      <h2>Certifications</h2>
-      <ul>
-        <li>AWS Academy Graduate</li>
-        <li>HTML5, CSS3, JavaScript</li>
-        <li>Java Basics, Computer Networking</li>
-      </ul>
-    </section>
+        <!-- Skills Section -->
+        <section id="skills" class="py-20">
+            <div class="glass-card p-8 md:p-12 rounded-3xl max-w-4xl mx-auto">
+                <h2 class="text-4xl font-bold text-center mb-12 section-title">Technical Skills</h2>
+                <div class="flex flex-wrap justify-center gap-4">
+                    <span class="skill-badge py-2 px-5 rounded-full text-lg font-semibold">AWS</span>
+                    <span class="skill-badge py-2 px-5 rounded-full text-lg font-semibold">Docker</span>
+                    <span class="skill-badge py-2 px-5 rounded-full text-lg font-semibold">Kubernetes</span>
+                    <span class="skill-badge py-2 px-5 rounded-full text-lg font-semibold">Jenkins</span>
+                    <span class="skill-badge py-2 px-5 rounded-full text-lg font-semibold">Terraform</span>
+                    <span class="skill-badge py-2 px-5 rounded-full text-lg font-semibold">Python</span>
+                    <span class="skill-badge py-2 px-5 rounded-full text-lg font-semibold">Java</span>
+                    <span class="skill-badge py-2 px-5 rounded-full text-lg font-semibold">JavaScript</span>
+                    <span class="skill-badge py-2 px-5 rounded-full text-lg font-semibold">HTML5 & CSS3</span>
+                    <span class="skill-badge py-2 px-5 rounded-full text-lg font-semibold">MySQL</span>
+                    <span class="skill-badge py-2 px-5 rounded-full text-lg font-semibold">Linux</span>
+                    <span class="skill-badge py-2 px-5 rounded-full text-lg font-semibold">Git & GitHub</span>
+                </div>
+            </div>
+        </section>
 
-    <section id="contact" data-aos="fade-up">
-      <h2>Contact</h2>
-      <p><strong>Email:</strong> <a href="mailto:Dewanaktar128@outlook.in">Dewanaktar128@outlook.in</a></p>
-      <p><strong>Phone:</strong> +91 8822341630</p>
-      <p><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/dewan-mohsin-aktar" target="_blank">linkedin.com/in/dewan-mohsin-aktar</a></p>
-    </section>
-  </main>
+        <!-- Projects Section -->
+        <section id="projects" class="py-20">
+             <div class="glass-card p-8 md:p-12 rounded-3xl max-w-4xl mx-auto">
+                <h2 class="text-4xl font-bold text-center mb-12 section-title">Projects</h2>
+                <div class="bg-gray-900/50 p-6 rounded-2xl border border-gray-700">
+                    <h3 class="text-2xl font-semibold text-white">AWS Web App Deployment</h3>
+                    <p class="mt-2 text-gray-300">
+                        A comprehensive project involving the deployment of a web application on AWS. This included setting up a custom Virtual Private Cloud (VPC), launching EC2 instances for compute, using NGINX as a reverse proxy, and integrating S3 for scalable object storage.
+                    </p>
+                    <div class="mt-4 flex flex-wrap gap-2">
+                        <span class="bg-blue-500/20 text-blue-300 text-sm font-medium mr-2 px-2.5 py-0.5 rounded">VPC</span>
+                        <span class="bg-blue-500/20 text-blue-300 text-sm font-medium mr-2 px-2.5 py-0.5 rounded">EC2</span>
+                        <span class="bg-blue-500/20 text-blue-300 text-sm font-medium mr-2 px-2.5 py-0.5 rounded">NGINX</span>
+                        <span class="bg-blue-500/20 text-blue-300 text-sm font-medium mr-2 px-2.5 py-0.5 rounded">S3</span>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-  <footer>
-    <p>&copy; 2025 Dewan Mohsin Aktar. All rights reserved.</p>
-  </footer>
+        <!-- Certifications Section -->
+        <section id="certifications" class="py-20">
+            <div class="glass-card p-8 md:p-12 rounded-3xl max-w-4xl mx-auto">
+                <h2 class="text-4xl font-bold text-center mb-12 section-title">Certifications</h2>
+                <ul class="list-none space-y-4 text-center">
+                    <li class="text-lg text-gray-300">🎓 Flipkart SCOA - Warehousing (Digital)</li>
+                    <li class="text-lg text-gray-300">🎓 AWS Academy Graduate</li>
+                    <li class="text-lg text-gray-300">🎓 HTML5, CSS3, JavaScript</li>
+                    <li class="text-lg text-gray-300">🎓 Java Basics, Computer Networking</li>
+                </ul>
+            </div>
+        </section>
 
-  <!-- Scripts -->
-  <script src="script.js"></script>
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>AOS.init();</script>
+        <!-- Contact Section -->
+        <section id="contact" class="py-20 text-center">
+            <div class="glass-card p-8 md:p-12 rounded-3xl max-w-4xl mx-auto">
+                <h2 class="text-4xl font-bold mb-4 section-title">Get In Touch</h2>
+                <p class="text-lg text-gray-300 mb-8">
+                    I'm always open to discussing new projects, creative ideas, or opportunities to be part of an amazing team.
+                </p>
+                <a href="mailto:Dewanaktar128@outlook.in" class="text-2xl font-semibold text-teal-400 hover:text-teal-300 transition-colors">
+                    Dewanaktar128@outlook.in
+                </a>
+                <div class="mt-8 flex justify-center space-x-6">
+                    <a href="https://linkedin.com/in/dewan-mohsin-aktar" target="_blank" class="text-gray-400 hover:text-white transition-colors">
+                        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" clip-rule="evenodd"/></svg>
+                    </a>
+                     <a href="https://github.com/devanmaktar" target="_blank" class="text-gray-400 hover:text-white transition-colors">
+                        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.168 6.839 9.49.5.092.682-.217.682-.482 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.031-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.378.203 2.398.1 2.651.64.7 1.03 1.595 1.03 2.688 0 3.848-2.338 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.001 10.001 0 0022 12c0-5.523-4.477-10-10-10z" clip-rule="evenodd"/></svg>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <footer class="text-center py-8 text-gray-500">
+            <p>&copy; 2025 Dewan Mohsin Aktar. All rights reserved.</p>
+        </footer>
+
+    </div>
+
+    <script>
+        // --- Three.js 3D Background ---
+        let scene, camera, renderer, stars;
+
+        function init() {
+            // Scene
+            scene = new THREE.Scene();
+
+            // Camera
+            camera = new THREE.PerspectiveCamera(60, window.innerWidth / window.innerHeight, 1, 1000);
+            camera.position.z = 1;
+            camera.rotation.x = Math.PI / 2;
+
+            // Renderer
+            const canvas = document.getElementById('bg-canvas');
+            renderer = new THREE.WebGLRenderer({ canvas });
+            renderer.setSize(window.innerWidth, window.innerHeight);
+            document.body.appendChild(renderer.domElement);
+
+            // Starfield
+            const starGeo = new THREE.BufferGeometry();
+            const starCount = 6000;
+            const positions = new Float32Array(starCount * 3);
+            for (let i = 0; i < starCount * 3; i++) {
+                positions[i] = (Math.random() - 0.5) * 600;
+            }
+            starGeo.setAttribute('position', new THREE.BufferAttribute(positions, 3));
+
+            let sprite = new THREE.TextureLoader().load('https://placehold.co/10x10/ffffff/ffffff.png');
+            let starMaterial = new THREE.PointsMaterial({
+                color: 0xaaaaaa,
+                size: 0.7,
+                map: sprite
+            });
+
+            stars = new THREE.Points(starGeo, starMaterial);
+            scene.add(stars);
+
+            animate();
+        }
+
+        // Animation Loop
+        function animate() {
+            stars.rotation.y += 0.0002;
+            renderer.render(scene, camera);
+            requestAnimationFrame(animate);
+        }
+
+        // Handle window resize
+        window.addEventListener('resize', () => {
+            camera.aspect = window.innerWidth / window.innerHeight;
+            camera.updateProjectionMatrix();
+            renderer.setSize(window.innerWidth, window.innerHeight);
+        });
+        
+        // Mouse movement interaction
+        document.addEventListener('mousemove', (e) => {
+            const mouseX = e.clientX / window.innerWidth - 0.5;
+            const mouseY = e.clientY / window.innerHeight - 0.5;
+            
+            camera.position.x += (mouseX * 5 - camera.position.x) * 0.02;
+            camera.position.y += (-mouseY * 5 - camera.position.y) * 0.02;
+            camera.lookAt(scene.position);
+        });
+
+        init();
+    </script>
 </body>
 </html>
